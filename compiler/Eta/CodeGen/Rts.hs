@@ -30,7 +30,7 @@ interp    = merge (rts "interpreter")
 
 closureType, indStaticType, contextType, capabilityType, taskType, funType, tsoType,
   frameType, conType, thunkType, rtsConfigType, exitCodeType,
-  rtsOptsEnbledType, stgArrayType, stgByteArrayType, stgMutVarType, stgMVarType,
+  rtsOptsEnabledType, stgArrayType, stgByteArrayType, stgMutVarType, stgMVarType,
   hsResultType, stgTVarType, stgBCOType, stgWeakType, valueType :: FieldType
 closureType       = obj stgClosure
 indStaticType     = obj stgIndStatic
@@ -43,7 +43,7 @@ frameType         = obj stackFrame
 conType           = obj stgConstr
 thunkType         = obj stgThunk
 rtsConfigType     = obj rtsConfig
-rtsOptsEnbledType = obj rtsOptsEnbled
+rtsOptsEnabledType = obj rtsOptsEnabled
 exitCodeType      = obj exitCode
 stgArrayType      = obj stgArray
 stgMutVarType     = obj stgMutVar
@@ -56,7 +56,7 @@ stgWeakType       = obj stgWeak
 valueType         = obj stgValue
 
 stgConstr, stgClosure, stgContext, capability, task, stgInd, stgIndStatic, stgThunk,
-  stgFun, stgTSO, stackFrame, rtsConfig, rtsOptsEnbled, exitCode, stgArray,
+  stgFun, stgTSO, stackFrame, rtsConfig, rtsOptsEnabled, exitCode, stgArray,
   stgByteArray, rtsUnsigned, stgMutVar, stgMVar, stgTVar, rtsGroup, hsResult,
   stgBCO, stgWeak, stablePtrTable, stgValue :: Text
 stgConstr     = stg "DataCon"
@@ -71,7 +71,7 @@ stgFun        = apply "Function"
 stgTSO        = stg "TSO"
 stackFrame    = stg "StackFrame"
 rtsConfig     = rts "RtsConfig"
-rtsOptsEnbled = rts "RuntimeOptions$RtsOptsEnabled"
+rtsOptsEnabled = rts "RuntimeOptions$RtsOptsEnabled"
 exitCode      = rts "Runtime$ExitCode"
 stgArray      = io "Array"
 stgByteArray  = io "ByteArray"
