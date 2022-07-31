@@ -659,8 +659,8 @@ efficient. It's critically important that zipWithAndUnzipM be
 specialized to TcS, and it's also quite helpful to actually `inline`
 it. On test T9872a, here are the allocation stats (Dec 16, 2014):
 
- * Unspecialized, uninlined:     8,472,613,440 bytes allocated in the heap
- * Specialized, uninlined:       6,639,253,488 bytes allocated in the heap
+ * Unspecialized, uninclined:     8,472,613,440 bytes allocated in the heap
+ * Specialized, uninclined:       6,639,253,488 bytes allocated in the heap
  * Specialized, inlined:         6,281,539,792 bytes allocated in the heap
 
 To improve performance even further, flatten_many_nom is split off
